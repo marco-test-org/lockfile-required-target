@@ -1,0 +1,12 @@
+# Control: calls the same workflow as a reusable workflow. GitHub documents
+# that a reusable workflow uses the lockfile of the repository defining it.
+name: Reusable control
+
+on:
+  pull_request:
+
+permissions: {}
+
+jobs:
+  call:
+    uses: marco-test-org/lockfile-required-source/.github/workflows/required.yml@main
